@@ -1,0 +1,95 @@
+:root {
+    --dark-gradient: linear-gradient(45deg,
+            rgba(0, 137, 138, 1),
+            rgba(8, 115, 127, 0.5),
+            rgb(42, 72, 88, 1));
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0px;
+
+}
+
+body {
+    background-color: tomato;
+    padding: 30px 50px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Bellota Text', cursive, sans-serif;
+    background-image: url(https://cdn.discordapp.com/attachments/1008049088324972657/1062095018732568656/grid_0.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.borders {
+
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+}
+
+#title-container {
+    margin: 20px auto;
+    padding: 10px 10px;
+
+    max-width: 600px;
+    min-width: 200px;
+
+    background-color: aliceblue;
+}
+
+#main-container {
+    margin: 0px auto;
+    max-width: 600px;
+    min-width: 200px;
+
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+#quote-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#author-container {
+    margin-bottom: 20px;
+
+}
+
+#button {
+    padding: 10px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    position: relative;
+    color: aliceblue;
+    font-weight: 700;
+
+    background-color: black;
+    border-color: black;
+    border-radius: 20px;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    color: aliceblue;
+}
+
+#button:active {
+    transition-duration: 0.3s;
+    transform: rotate(30deg);
+    background-color: gray;
+}

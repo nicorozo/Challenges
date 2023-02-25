@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(54, 63, 69);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#players-section {
+    display: flex;
+    height: 60%;
+    width: 95%;
+    justify-content: space-around;
+}
+
+.side-container {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgb(36, 34, 31);
+    width: 95%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-card {}
+
+.player-card p {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+.value-img {}
+
+#container-div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 300px;
+    width: 39%;
+    height: 100%;
+
+    margin: 0 15px;
+
+    /* background-size: 130%;
+    animation: bg-animation 10s infinite alternate;
+    transition: 0.2s; */
+}
+
+.mini-container {
+    display: flex;
+    justify-content: center;
+
+    width: 95%;
+}
+
+.mini-container h1 {
+    color: black;
+}
+
+.rps-button-style {
+    background-color: bisque;
+
+}
+
+#inputId {}
+
+#button {
+    background-color: rgb(254, 180, 28);
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+
+    box-shadow: 5px 5px 10px;
+}
+
+#score {
+    background-color: black;
+    width: 95%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+#winner {
+    font-size: 5em;
+    color: azure;
+}
