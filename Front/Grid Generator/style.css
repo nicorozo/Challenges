@@ -1,0 +1,97 @@
+:root {
+    --grid-colums: 8;
+    --grid-rows: 8;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(#F2EBBF, #ebe09b);
+    font-family: 'Oswald', sans-serif;
+
+}
+
+#header-bar {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+#left-header {
+    display: flex;
+    justify-content: center;
+    margin: auto auto auto -10px;
+    width: 40%;
+}
+
+#right-header {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#right-header p {
+    margin: 0 5px;
+}
+
+#right-header input {
+    width: 5%;
+    padding: 0 8px;
+    background-color: #8CBEB2;
+    border: black 2px solid;
+    border-radius: 10%;
+}
+
+#right-header button {
+    margin: 0 10px;
+    padding: 10px;
+    color: aliceblue;
+    background-color: tomato;
+    border: black 2px solid;
+    border-radius: 10%;
+}
+
+
+/* ------grid--------- */
+
+
+#grid16x16 {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+    border: #8CBEB2 5px solid;
+    border-radius: 10px;
+
+    grid-template-columns: repeat(var(--grid-colums), auto);
+    grid-template-rows: repeat(var(--grid-rowws), auto);
+    padding: 10px;
+    background-color: #F3B562;
+    background-image: url(https://cdn.discordapp.com/attachments/951197655021797436/1072222042587398194/RobinRen_digital_nomad_living_in_utter_agony_of_soul_waiting_an_dbbdbe6f-3154-4fed-8cf8-1d2ccba9412e.png);
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+
+}
+
+div .pixels {
+    height: auto;
+    width: auto;
+    background-color: #5C4B51;
+    border-radius: 20px;
+    transition: 200ms;
+
+}

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+body {
+    background: url(Media/picture-background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    padding: 20px;
+}
+
+.borders {
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 1px 5px black;
+
+}
+
+#button {
+    position: absolute;
+    top: 80%;
+    padding: 12px 10vw;
+
+    font-size: 2em;
+    color: aliceblue;
+
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#button:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+
+/* display */
+
+#display-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    background-color: white;
+    background-size: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*this compensates the element and center it */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 200px;
+    height: 100px;
+    padding: 25px;
+    border-radius: 5%;
+
+    animation-name: animationdisplay;
+    animation-duration: .4s;
+
+}
+
+#close-button {
+    font-size: 3rem;
+}
+
+#close-button:hover {
+    cursor: pointer;
+    color: red;
+}
+
+@keyframes animationdisplay {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}

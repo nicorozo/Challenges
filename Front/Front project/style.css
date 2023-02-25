@@ -1,0 +1,82 @@
+:root {
+    --color-dark: linear-gradient(45deg,
+            rgba(18, 96, 99, 1)20%, rgb(85, 195, 232)80%);
+    --color-brigth: linear-gradient(45deg,
+            rgba(170, 204, 38, 1)20%, rgba(255, 219, 78, 1)70%);
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0 auto;
+}
+
+.side-container {
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: teal;
+    width: 30%;
+    margin: 5px 10px;
+}
+
+#left-container {}
+
+#container-div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 300px;
+    width: 40%;
+
+    background-size: 130%;
+    animation: bg-animation 10s infinite alternate;
+    transition: 0.2s;
+}
+
+@keyframes bg-animation {
+    10% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+#button {
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#right-container {}
+
+.class-fizz {
+    background-image: url(https://www.dontwasteyourmoney.com/wp-content/uploads/2017/05/15025908560_ed6a44e644_o_tropical-e1495745262814.jpg);
+    background-position: 25% 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.class-buzz {
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp5327652.png&f=1&nofb=1&ipt=f6604b5362d133ffa12c1575d5cc488b66e292f43a4e049acb94e47a0efa4b8f&ipo=images);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fizzbuzz {
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2116186.png&f=1&nofb=1&ipt=ca1f0704c72d9d969403072d60589ba47a4bb80edd536f2f0e5bdb230c6391e0&ipo=images);
+    background-repeat: no-repeat;
+
+}
