@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div id="flex-collumn">
+   <header id="header" class="borders"> 
+        <div class="left-header">
+            <div  class="header-info"><strong>Hunger: </strong><span id="hunger" class="span-score green-letters">0</span> </div>
+            <div  class="header-info"><strong>Status: </strong><span id="status" class="span-score green-letters">Off</span> </div>
+        </div>
+   </header>
+   <playground id="playground" class="borders screen-gradient">
+    <pet id="pet">
+        <img id="wake-up" class="faces display-none" src="Photoshop Design/Bmo face mouth.png" alt="" >
+        <img id="smile" class="faces display-none" src="Photoshop Design/Bmo face smile.png" alt="" >
+        <img id="sleep" class="faces display-none " src="Photoshop Design/Bmo face sleep.png" alt="">
+    </pet>
+   </playground>
+    <foot id="footer" class="borders">
+        <div class="grid-item1">
+            <button id="action-button"  class="buttons "></button></div>
+        <div class="grid-item3">
+            <button id="status-change-button" class="buttons">+</button></div>
+        <div class="grid-item2">
+            <button id="on-off-button" class="buttons">#</button></div>
+    </foot>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
