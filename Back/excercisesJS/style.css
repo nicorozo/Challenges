@@ -2,18 +2,34 @@ html {
     font-family: sans-serif;
 }
 
-h2 {
-    font-size: 16px;
-}
-
-.a11y-label {
-    margin: 0;
-    text-align: right;
-    font-size: 0.7rem;
-    width: 98%;
-}
-
 body {
     margin: 10px;
-    background: #f5f9fa;
+    background: #6c6c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
+
+.component {
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    background-color: azure;
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#image {
+    width: 300px;
+}
+
+#movie-title {}
