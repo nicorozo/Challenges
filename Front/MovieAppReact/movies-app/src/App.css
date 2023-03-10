@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+
+.main-container {
+    border: 6px rgb(210, 118, 5) inset;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2F1k4StRnGuhM1QNywth%2Fsource.gif&f=1&nofb=1&ipt=1a315e0374f9da495cafb09c547548fa92b98fac30d96d9b2584747bcc6538bc&ipo=images);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 10px;
+    max-width: 700px;
+
+}
+
+/* ////////Card ///////////// */
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(27, 23, 36, 1);
+
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-column h2 {
+    color: rgba(238, 112, 87, 1);
+}
+
+.card-border {
+    border: 2px rgba(238, 112, 87, 1) solid;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px black;
+}
+
+/* ///////////////////////////////// */
+
+
+.picture {
+    object-fit: cover;
+    width: 85%;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* //////////////// NavBar /////////// */
+
+.nav-bar {
+    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpm1.narvii.com%2F5920%2F4f649857295fc0e1c59a91989ec59b7e4339cb0c_hq.jpg&f=1&nofb=1&ipt=d4b3e06988a93e6dac12b20038f5e3d9e457d9ea6df0bd9950c310150aceb7fd&ipo=images);
+    background-position: 0 50%;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+
+.nav-button {
+    padding: 5px;
+    background-color: rgba(27, 23, 36, 1);
+    color: aliceblue;
+    font-weight: bold;
+    width: 70px;
+    height: 80%;
+}
+
+.nav-button :active {}
