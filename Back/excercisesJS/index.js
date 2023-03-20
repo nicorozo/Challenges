@@ -1,33 +1,52 @@
-let searchQueary = document.getElementById('searchbar').value
-const searchButton = document.getElementById('search-button')
-let htmlImage = document.getElementById('image')
-let title = document.getElementById('movie-title')
-
-
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '50ebfbd5f7mshdf84906861363b2p120042jsn563a23a38166',
-        'X-RapidAPI-Host': 'imdb8.p.rapidapi.com',
-        q: searchQueary
-
+function Book(title, author, pages, read) {
+    this.title = title
+    this.author = author
+    this.pages = pages
+    this.read = read
+    this.info = function () {
+        return (`${title} by ${author}, it has ${pages} pages and ${read ? 'yes I have read it' : 'no I havent read it'}`)
     }
-};
+}
+const book1 = new Book('Harry Potter', 'Donna', '234', true)
+
+console.log(book1.info())
+
+/////////////////////////////////////////////
 
 
+function Student() {
+
+}
+Student.prototype.sayName = function () { console.log('Student prototype', this.name) }
+
+function EightGrader(name) {
+    this.name = name
+    this.grade = 8
+}
+
+EightGrader.prototype = Object.create(Student.prototype)
+//EightGrader.prototype.sayName = function () { console.log('EightGrader prototype') } this works as first layer if activated
+
+const myInput = new EightGrader('Namesio')
+
+myInput.sayName()
+
+Object.getPrototypeOf(EightGrader);
 
 
+//////////////////////////////////////////////
 
-searchButton.addEventListener('click', function (e) {
-    e.preventDefault()
+function Person(race, sex) {
+    this.race = race
+    this.sex = sex
+}
 
-    fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=${searchQueary}`, options)
-        .then(response => response.json())
-        .then(data => {
-            title.innerText = data.d[3].l
-            htmlImage.src = data.d[3].i.imageUrl
-            console.log(data)
-        })
-        .catch(err => console.error(err));
+const daniel = new Person('white', 'male')
 
-})
+Person.prototype.newMethod = function () {
+    return `Race: ${this.race} and Sex: ${this.sex}`
+}
+
+
+console.log(daniel.newMethod())
+
