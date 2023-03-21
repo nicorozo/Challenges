@@ -1,10 +1,10 @@
-function Book(title, author, pages, read) {
+function Book(title, author, pages, isRead) {
     this.title = title
     this.author = author
     this.pages = pages
-    this.read = read
+    this.read = isRead
     this.info = function () {
-        return (`${title} by ${author}, it has ${pages} pages and ${read ? 'yes I have read it' : 'no I havent read it'}`)
+        return (`${title} by ${author}, it has ${pages} pages and ${isRead ? 'yes I have read it' : 'no I havent read it'}`)
     }
 }
 const book1 = new Book('Harry Potter', 'Donna', '234', true)
@@ -49,4 +49,13 @@ Person.prototype.newMethod = function () {
 
 
 console.log(daniel.newMethod())
+////////////////////////////////
+
+class House {
+    constructor(color) {
+        this.color = color
+    }
+}
+
+const houseObject = new House('red')
 
