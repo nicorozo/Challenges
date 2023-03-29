@@ -1,61 +1,32 @@
-function Book(title, author, pages, isRead) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = isRead
-    this.info = function () {
-        return (`${title} by ${author}, it has ${pages} pages and ${isRead ? 'yes I have read it' : 'no I havent read it'}`)
+function titleToNumber(title) {
+    let arrayOfIndex = []
+    let total = 0
+    let power = title.length
+    for (let i = 0; i < title.length; i++) {
+        arrayOfIndex[i] = (title.charCodeAt(i) - 64)
+        if (i > 0) {
+            arrayOfIndex[i - 1] = arrayOfIndex[i - 1] * (26 ^ power)
+        }
+        power--
     }
+    arrayOfIndex.forEach((element) => total += element)
+    return total
 }
-const book1 = new Book('Harry Potter', 'Donna', '234', true)
+console.log(titleToNumber('AA'))
 
-console.log(book1.info())
+//  = last letter - 2
+// letter * 26 =  last letter - 1
+// lastLetter = letter 
 
-/////////////////////////////////////////////
-
-
-function Student() {
-
-}
-Student.prototype.sayName = function () { console.log('Student prototype', this.name) }
-
-function EightGrader(name) {
-    this.name = name
-    this.grade = 8
-}
-
-EightGrader.prototype = Object.create(Student.prototype)
-//EightGrader.prototype.sayName = function () { console.log('EightGrader prototype') } this works as first layer if activated
-
-const myInput = new EightGrader('Namesio')
-
-myInput.sayName()
-
-Object.getPrototypeOf(EightGrader);
-
-
-//////////////////////////////////////////////
-
-function Person(race, sex) {
-    this.race = race
-    this.sex = sex
-}
-
-const daniel = new Person('white', 'male')
-
-Person.prototype.newMethod = function () {
-    return `Race: ${this.race} and Sex: ${this.sex}`
-}
-
-
-console.log(daniel.newMethod())
-////////////////////////////////
-
-class House {
-    constructor(color) {
-        this.color = color
+function titleToNumber(title) {
+    var arr = title.split("");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charCodeAt(0) - 64
     }
+    arr.reverse();
+    var sum = 0;
+    for (i = 0; i < arr.length; i++) {
+        sum += (arr[i] * Math.pow(26, i));
+    }
+    return sum;
 }
-
-const houseObject = new House('red')
-
